@@ -14,17 +14,17 @@
   <body>
     <nav>
       <div class="nav__content">
-        <div class="logo"><a href="#">Baloo</a></div>
+        <div class="logo"><a href="#">Bal Bahadur Khadka</a></div>
         <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
         <input type="checkbox" name="check" id="check" />
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+<!--          <li><a href="#">About</a></li>-->
+          <li><a href="#" onclick="redirectToCv()">Resume</a></li>
+<!--          <li><a href="#">Portfolio</a></li>-->
+          <li><a href="#" onclick="contactMe()">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -33,7 +33,7 @@
         <div class="content">
           <p class="subtitle">HELLO</p>
           <h1 class="title">
-            I'm <span>Bal Bahadur Khadka(Baloo)<br />a</span> Software Engineer | Java Developer
+            I'm <span>Bal Bahadur Khadka<br />a</span> Software Engineer | Java Developer
           </h1>
           <p class="description">
             Welcome to my java developer portfolio! I'm Bal Bahadur Khadka, a skilled and
@@ -42,15 +42,15 @@
           </p>
 
           <div class="social__content">
-            <a href="./assets/bbk.pdf"  target="_blank"><img src="./assets/resume.svg" class="social_icon"></a>
-            <a href="https://www.linkedin.com/in/bal-bahadur-khadka-aa98b7159/" target="_blank"><img src="./assets/linkedin.svg" class="social_icon"></a>
-            <a href="https://github.com/bbk8910" target="_blank" ><img src="./assets/github.svg" class="social_icon"></a>
+<!--            <a href="./assets/bbk.pdf"  target="_blank"><img src="./assets/resume.svg" class="social_icon"></a>-->
+            <a href="#" onclick="redirectTolLinkedIn()"><img src="./assets/linkedin.svg" class="social_icon"></a>
+            <a href="#" onclick="redirectToGithub()" ><img src="./assets/github.svg" class="social_icon"></a>
 
           </div>
 
           <div class="action__btns">
-            <button class="hire__me">Hire Me</button>
-            <button class="portfolio">Portfolio</button>
+            <button class="hire__me" onclick="redirectToCv()">Download CV</button>
+            <button class="portfolio" onclick="contactMe()">Contact Me</button>
           </div>
         </div>
         <div class="image">
@@ -67,4 +67,27 @@
 
     </section>
   </body>
+<script>
+  const cvLink="https://drive.google.com/file/d/1Gy1sKfrzNzhUXi5U_YCGLyPRh4XicgDn/view?usp=drive_link"
+  const linkedIn="https://www.linkedin.com/in/bal-bahadur-khadka-aa98b7159/"
+  const github="https://github.com/bbk8910"
+  const mail="mailto:khadkabal1020@gmail.com"
+
+  function redirectToCv() {
+    window.open(cvLink, "_blank");
+  }
+
+  function redirectTolLinkedIn() {
+    window.open(linkedIn, "_blank");
+  }
+
+  function redirectToGithub() {
+    window.open(github, "_blank");
+  }
+
+  function contactMe(){
+    window.open(mail)
+  }
+
+</script>
 </html>
